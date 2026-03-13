@@ -1,10 +1,3 @@
-﻿"""Logger package exports."""
-
-from .custom_logger import get_logger, log_execution, log_function, logger
-
-__all__ = [
-    "get_logger",
-    "log_execution",
-    "log_function",
-    "logger",
-]
+﻿from .custom_logger import CustomLogger
+# Create a single shared logger instance
+GLOBAL_LOGGER = CustomLogger().get_logger("research_and_analyst")
